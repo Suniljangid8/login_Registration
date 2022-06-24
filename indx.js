@@ -9,9 +9,9 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const PORT = process.env.PORT || 8535;
 
-mongoose.connect('mongodb://localhost:27017/NodeDataBase', {
+mongoose.connect('mongodb://127.0.0.1:27017/NodeDataBase', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 }, (err) => {
   if (!err) {
     console.log('MongoDB Connection Succeeded.');
