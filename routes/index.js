@@ -32,7 +32,7 @@ router.post('/', function(req, res, next) {
 						var newPerson = new User({
 							Firstname:personInfo.Firstname,
 							Lastname:personInfo.Lastname,
-							Mobileno:personInfo.Lastname,
+							Mobileno:personInfo.Mobileno,
 							Address:personInfo.Address,
 							unique_id:c,
 							email:personInfo.email,
@@ -94,7 +94,7 @@ router.get('/profile', function (req, res, next) {
 			res.redirect('/');
 		}else{
 			//console.log("found");
-			return res.render('data.ejs', {"name":data.username,"email":data.email});
+			return res.render('data.ejs', { "name":data.username,"email":data.email });
 		}
 	});
 });

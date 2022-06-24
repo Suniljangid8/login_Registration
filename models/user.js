@@ -3,15 +3,50 @@ const Schema = mongoose.Schema;
 
 userSchema = new Schema( {
 	
-	Firstname:String,
-	Lastname:String,
-	Mobileno:Number,
-	Address:String,
-	unique_id: Number,
-	email: String,
-	username: String,
-	password: String,
-	passwordConf: String
+	Firstname:{
+	 type:String,
+	 required: true,
+	},
+
+	Lastname:{
+	type:String,
+	required: true,
+	},
+
+	Mobileno:{
+		type:Number,
+		required: true,
+		unique:true,
+	},
+
+	Address:{
+		type:String,
+		required:true,
+	},
+
+	unique_id: {
+		type:Number,
+	},
+
+	email: {
+		type:String,
+		required:true,
+	},
+
+
+	username: {
+		type:String,
+		required:true,
+	},
+
+	password: {
+		type:String,
+		required:true
+	},
+	passwordConf:{
+		type: String,
+		required:true,
+	},
 }),
 User = mongoose.model('User', userSchema);
 

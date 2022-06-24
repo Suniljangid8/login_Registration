@@ -6,7 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
-//const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo')(session);
+const PORT = process.env.PORT || 8535;
 
 mongoose.connect('mongodb://localhost:27017/NodeDataBase', {
   useNewUrlParser: true,
@@ -26,14 +27,14 @@ db.once('open', function () {
 
 
 
-/*  app.use(session({
-  secret: 'work hard',
+ app.use(session({
+  secret: 'work',
   resave: true,
   saveUninitialized: false,
-  store: MongoStore({
+  store: new MongoStore({
     mongooseConnection: db
   })
-}));  */
+}));  
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');	
@@ -60,7 +61,7 @@ app.use( (err, req, res, next)=> {
   res.send(err.message);
 });
 
-const PORT = process.env.PORT || 8535;
+
 app.listen(PORT, function () {
   console.log('Server is started on http://127.0.0.1:'+PORT);
 });
