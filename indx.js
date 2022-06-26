@@ -7,18 +7,18 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
- const PORT = process.env.PORT || 8535;
+ const PORT = process.env.PORT || 9585;
 
-mongoose.connect('mongodb://127.0.0.1:27017/NodeDataBase', {
+mongoose.connect('mongodb+srv://sunil:6XzJXBg4NCoQpxIz@cluster0.ojfrstl.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-}, (err) => {
-  if (!err) {
+
+}).then(() => {
+  
     console.log('MongoDB Connection Succeeded.');
-  } else {
+  }).catch(err=> {
     console.log('Error in DB connection : ' + err);
-  }
-});
+  });
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
