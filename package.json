@@ -5,11 +5,12 @@
   "main": "indx.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node indx.js"
+    "start": "node indx.js"
   },
   "author": "jangid",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "connect-mongo": "^3.2.0",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",

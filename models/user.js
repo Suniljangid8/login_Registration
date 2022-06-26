@@ -24,6 +24,24 @@ userSchema = new Schema( {
 		required:true,
 	},
 
+	Street:{
+		type:String,
+		required:true,
+	},
+	City:{
+		type:String,
+		required:true,
+	},
+	State:{
+		type:String,
+		required:true,
+	},
+	Country:{
+		type:String,
+		required:true,
+	},
+
+
 	unique_id: {
 		type:Number,
 	},
@@ -31,6 +49,7 @@ userSchema = new Schema( {
 	email: {
 		type:String,
 		required:true,
+		unique:true,
 	},
 
 

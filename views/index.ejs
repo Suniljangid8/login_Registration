@@ -21,11 +21,8 @@
 					data: $('#form1').serialize(),
 					dataType: "json",
 					success: function(response){
-						//alert("a");
-						//console.log(response.Success);
 						$('#form1')[0].reset();
 						document.getElementById("check").innerHTML=response.Success;
-         					//ADD THIS CODE
          					setTimeout(function(){
          						document.getElementById("check").innerHTML="";
          					},3000);
@@ -56,15 +53,22 @@
                 <input type="text" class="form-control" maxlength="10"  name="Mobileno" placeholder="Mobile" required=""><br/>
 			    <label>E-mail:</label>
 				<input type="type" name="email" placeholder="E-mail" required="" class="form-control" ><br/>
-				<label>Address</label>
-				<input type="text" name="Address" placeholder="Address" required="" class="form-control" ><br/>
 
+                <fieldset>
+					
+				<label>Address</label>
+				
+				<input type="text" name="Address" placeholder="Address" required="" class="form-control" ><br/>
 				
 				<input type="text" name="Street" placeholder="Street" required="" class="form-control" maxlength="10"><br/>
-				<input type="text" name="City" placeholder="City" required="" class="form-control" maxlength="15"><br/>
-				<input type="text" name="State" placeholder="State" required="" class="form-control" maxlength="30"><br/>
-				<input type="text" name="Country" placeholder="Country"  required="" class="form-control" maxlength="10"><br/>
 				
+				<input type="text" name="City" placeholder="City" required="" class="form-control" maxlength="15"><br/>
+				
+				<input type="text" name="State" placeholder="State" required="" class="form-control" maxlength="30"><br/>
+				
+				<input type="text" name="Country" placeholder="Country"  required="" class="form-control" maxlength="15"><br/>
+				
+				</fieldset>
 	
 
 
