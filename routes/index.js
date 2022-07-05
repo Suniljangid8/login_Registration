@@ -11,7 +11,7 @@ router.post('/', function(req, res, next) {
 	console.log(req.body);
 	let personInfo = req.body;
 
-	if(!personInfo.Firstname || !personInfo.Lastname || !personInfo.Mobileno || !personInfo.Address ||   !personInfo.Street || !personInfo.City || !personInfo.State || !personInfo.Country ||           !personInfo.email || !personInfo.username || !personInfo.password || !personInfo.passwordConf){
+	if(!personInfo.Firstname || !personInfo.Lastname || !personInfo.Mobileno || !personInfo.Address ||   !personInfo.Street || !personInfo.City || !personInfo.State || !personInfo.Country || !personInfo.email || !personInfo.username || !personInfo.password || !personInfo.passwordConf){
 		res.send();
 	} else {
 		if (personInfo.password == personInfo.passwordConf) {
@@ -37,9 +37,6 @@ router.post('/', function(req, res, next) {
 							City:personInfo.City,
 							State:personInfo.State,
 							Country:personInfo.Country,
-
-
-
 							unique_id:c,
 							email:personInfo.email,
 							username: personInfo.username,
