@@ -51,9 +51,11 @@
 		<div class="form-group">
 			<form id="form1" method="post"  onsubmit="return checkForm(this);">
 				<label> Firstname:</label>
-				<input type="text" class="form-control" name="Firstname" placeholder="Lastname" required=""><br/>
+				<input type="text" class="form-control" name="Firstname" placeholder="Lastname" onkeypress="return (event.charCode > 64 && 
+				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required=""><br/>
 				<label> Lastname:</label>
-                <input type="text" class="form-control" name="Lastname" placeholder="Lastname" required=""><br/>
+                <input type="text" class="form-control" name="Lastname" placeholder="Lastname" onkeypress="return (event.charCode > 64 && 
+				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" required=""><br/>
 				<label>MobileNo:</label>
                 <input type="text" class="form-control" minlength="10" maxlength="10"  name="Mobileno" placeholder="Mobile" required=""><br/>
 			    <label>E-mail:</label>
@@ -71,7 +73,7 @@
 				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  required="" class="form-control" maxlength="15"><br/>
 				
 				<input type="text" name="State" placeholder="State"  onkeypress="return (event.charCode > 64 && 
-				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  required="" class="form-control" maxlength="30"><br/>
+				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  required="" class="form-control" maxlength="15"><br/>
 				
 				<input type="text" name="Country" placeholder="Country" onkeypress="return (event.charCode > 64 && 
 				event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)"  required="" class="form-control" maxlength="15"><br/>
@@ -81,7 +83,7 @@
 
 
 				<label>Username</label>
-				<input type="text" name="username" placeholder="Username" required pattern="\w+" class="form-control"><br/>
+				<input type="text" name="username" placeholder="Username" required="" class="form-control"><br/>
 
 				<label>Password</label>
 				<input type="password" name="password" placeholder="Password" id="password" 

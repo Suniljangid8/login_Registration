@@ -8,12 +8,6 @@ const validator = require('validator')
 };
  */
 
-
-
-
-
-
-
 userSchema = new Schema( {
 	
 	Firstname:{
